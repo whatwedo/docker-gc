@@ -10,7 +10,8 @@ RUN apk --update add bash curl \
   && rm -rf /var/cache/apk/*
 
 COPY ./docker-gc /docker-gc
+COPY ./docker-gc-run /docker-gc-run
 
 VOLUME /var/lib/docker-gc
 
-CMD ["/docker-gc"]
+CMD ["/docker-gc-run"]

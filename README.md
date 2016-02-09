@@ -160,3 +160,5 @@ $ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spot
 
 The `/etc` directory is also mapped so that it can read any exclude files
 that you've created.
+
+By default, docker-gc runned in a Docker container will run every 1800 seconds (30 minutes). In some cases you might need to change this setting. Set the `CLEAN_PERIOD_SECONDS` variable to override this default.

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CLEAN_PERIOD_SECONDS=${CLEAN_PERIOD_SECONDS:=1800}
+
+while true
+do
+    bash /docker-gc
+    sleep $CLEAN_PERIOD_SECONDS
+done
+
+exit 0
